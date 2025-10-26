@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strona z Tekstem</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+    margin: 0;
+    padding: 40px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  h1 {
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 40px;
+  }
+
+  .section {
+    background: #fff;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .columns-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .columns-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .columns-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .col {
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Modernizowany Układ Tekstu</h1>
+
+  <!-- Główna sekcja -->
+  <div class="section">
+    <p>
+      <strong>Updated:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ipsum ac eros porta, consequat lobortis mi feugiat. Etiam ut tincidunt diam...
+    </p>
+  </div>
+
+  <!-- Trzy kolumny -->
+  <div class="section">
+    <div class="columns-3">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum ante massa. Vivamus cursus risus quis risus blandit...
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum ante massa. Vivamus cursus risus quis risus blandit...
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum ante massa. Vivamus cursus risus quis risus blandit...
+      </div>
+    </div>
+  </div>
+
+  <!-- Cztery kolumny -->
+  <div class="section">
+    <div class="columns-4">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed sapien vel lorem sodales gravida...
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed sapien vel lorem sodales gravida...
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed sapien vel lorem sodales gravida...
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed sapien vel lorem sodales gravida...
+      </div>
+    </div>
+  </div>
+
+  <!-- Dwie kolumny -->
+  <div class="section">
+    <div class="columns-2">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum ante massa. Vivamus cursus risus quis risus blandit...
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum ante massa. Vivamus cursus risus quis risus blandit...
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
