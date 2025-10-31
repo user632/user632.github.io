@@ -98,9 +98,9 @@ function adstr(a){
     let tmp=document.getElementById("ou").innerHTML;
    let  l=Text.length(tmp);
    let b=tmp[l-1];
-    if(b!="+"&&a!="+" ||a!="-"){
+    if(a!="+"&&a!="-" &&a!="*"&&a!="/"){
     tpm=tmp+a;
-    document.getElementById("ou").innerHTML=tmp;}
+    document.getElementById("ou").innerHTML=tmp;}else{if(){}}
 }
 
 
