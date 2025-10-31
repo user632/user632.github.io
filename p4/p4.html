@@ -96,8 +96,11 @@ align-self: center;
 function adstr(a){
 
     tmp=document.getElementById("ou").innerHTML;
+    l=Text.length(tmp);
+    b=tmp[l-1];
+    if(a!="+" ||a!="-"){
     tpm=tmp+a;
-    document.getElementById("ou").innerHTML=tmp;
+    document.getElementById("ou").innerHTML=tmp;}
 }
 
 
