@@ -95,9 +95,9 @@ align-self: center;
 <script>
 function adstr(a){
 
-    tmp=document.getElementById("ou").innerHTML;
-    l=Text.length(tmp);
-    b=tmp[l-1];
+    let tmp=document.getElementById("ou").innerHTML;
+   let  l=Text.length(tmp);
+   let b=tmp[l-1];
     if(b=="+"&&a!="+" ||a!="-"){
     tpm=tmp+a;
     document.getElementById("ou").innerHTML=tmp;}
