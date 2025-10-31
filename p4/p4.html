@@ -85,7 +85,7 @@ align-self: center;
         </div>
     <div class="lines">
          <button class="smal">4</button>
-        <button class="smal" onclick="adstr(5)">5</button>
+        <button class="smal" onclick="ddd(5)">5s</button>
         <button class="smal">6</button>
         <button class="smal">-</button></div>
     <div class="lines">3</div>
@@ -93,17 +93,11 @@ align-self: center;
     </div>
 </div>
 <script>
-function adstr(a) {
+function ddd(d) {
+ let a=document.getElementById("aa").innerHTML;
 
-    let tmp=document.getElementById("ou").innerHTML;
-    //let  l=Text.length(tmp);
-    //let b=tmp[l-1];
-   /// if(a!="+"&&a!="-"&&a!="*"&&a!="/"){
-    tpm=tmp+a;
-    document.getElementById("ou").innerHTML=tmp;///}
-   /// else
-   /// if(b!="+"&&b!="-"){ tpm=tmp+a;
-   /// document.getElementById("ou").innerHTML=tmp;}
+
+  document.getElementById("aa").innerHTML=a+d;
 }
 
 
