@@ -100,7 +100,10 @@ function adstr(a){
    let b=tmp[l-1];
     if(a!="+"&&a!="-" &&a!="*"&&a!="/"){
     tpm=tmp+a;
-    document.getElementById("ou").innerHTML=tmp;}else{if(){}}
+    document.getElementById("ou").innerHTML=tmp;}
+    else
+    {if(b!="+"&&b!="-"){ tpm=tmp+a;
+    document.getElementById("ou").innerHTML=tmp;}}
 }
 
 
