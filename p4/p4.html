@@ -134,7 +134,7 @@ else if((d=='+'||d=='-'||d=='*'||d=='/')&&(e=='+'||e=='-'||e=='*'||e=='/')){//do
 }else if(d=='!'){
 st=st.substring(0,l-1);
 document.getElementById("ou").innerHTML=st;
-}else if(){}else
+}else if(d=='='){document.getElementById("ou").innerHTML=eval(a);}else
 {document.getElementById("ou").innerHTML=a+d;}
 
   
