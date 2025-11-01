@@ -134,9 +134,9 @@ function ddd(d) {
 if(d=='c'){document.getElementById("ou").innerHTML="";coma=0;}
 else if(d=='.'){if(coma==0){document.getElementById("ou").innerHTML=a+d;coma=1;}else{}
 
-}else if((d=='+'||d=='-'||d=='*'||d=='/')&&(e=='+'||e=='-'||e=='*'||e=='/')){coma=0;
+}else if((d=='+'||d=='-'||d=='*'||d=='/')&&(e=='+'||e=='-'||e=='*'||e=='/')){
     //document.getElementById("ou").innerHTML="ffff"
-}else if(d=='!'){
+}else if((d=='+'||d=='-'||d=='*'||d=='/')){coma=0;document.getElementById("ou").innerHTML=a+d;}else if(d=='!'){
 st=st.substring(0,l-1);
 document.getElementById("ou").innerHTML=st;
 }else if(d=='='){document.getElementById("ou").innerHTML=eval(a);coma=0;}else
