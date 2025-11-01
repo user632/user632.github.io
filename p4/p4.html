@@ -79,7 +79,7 @@ align-self: center;
 
 }
 </style>
-<script src=""></script>
+
 <body>
 
 
@@ -122,6 +122,8 @@ align-self: center;
     </div>
 </div>
 <script>
+    let coma=0;
+    let number=0;
 function ddd(d) {
  let a=document.getElementById("ou").innerHTML;
  let st="";
@@ -130,7 +132,10 @@ function ddd(d) {
  let l=st.length;
  let e=st[l-1];
 if(d=='c'){document.getElementById("ou").innerHTML="";}
-else if((d=='+'||d=='-'||d=='*'||d=='/')&&(e=='+'||e=='-'||e=='*'||e=='/')){//document.getElementById("ou").innerHTML="ffff"
+else if(d=='.'){coma=1;if(){document.getElementById("ou").innerHTML=a+d;}else{}
+
+}else if((d=='+'||d=='-'||d=='*'||d=='/')&&(e=='+'||e=='-'||e=='*'||e=='/')){
+    //document.getElementById("ou").innerHTML="ffff"
 }else if(d=='!'){
 st=st.substring(0,l-1);
 document.getElementById("ou").innerHTML=st;
