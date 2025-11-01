@@ -132,7 +132,7 @@ function ddd(d) {
  let l=st.length;
  let e=st[l-1];
 if(d=='c'){document.getElementById("ou").innerHTML="";}
-else if(d=='.'){coma=1;if(){document.getElementById("ou").innerHTML=a+d;}else{}
+else if(d=='.'){if(coma==0){document.getElementById("ou").innerHTML=a+d;coma=1;}else{}
 
 }else if((d=='+'||d=='-'||d=='*'||d=='/')&&(e=='+'||e=='-'||e=='*'||e=='/')){
     //document.getElementById("ou").innerHTML="ffff"
