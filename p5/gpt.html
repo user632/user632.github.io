@@ -1,94 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Formularz na tle faktury</title>
+<meta charset="UTF-8">
+<title>Faktura z tłem</title>
 <style>
-:root{--width:900px}
-body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;display:flex;align-items:center;justify-content:center;padding:20px;background:#f3f5f7}
+    body {
+        margin: 0;
+        padding: 0;
+        background: #ddd;
+        display: flex;
+        justify-content: center;
+    }
 
+    .invoice {
+        position: relative;
+        width: 1000px; /* możesz zmienić */
+        aspect-ratio: 2970 / 2100; /* proporcje obrazu */
+        background-image: url("fak2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-/* Container that preserves square aspect ratio (image is 1:1) */
-.card{width:min(var(--width),95vw);max-width:1000px;position:relative;background-image:url('fak.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;padding-top:100%;box-shadow:0 8px 30px rgba(2,6,23,0.12);border-radius:6px}
+    input {
+        position: absolute;
+        border: 1px solid rgba(0,0,0,0.3);
+        background: rgba(255,255,255,0.5);
+        padding: 3px;
+        font-size: 12px;
+    }
 
+    /* ---- Przykładowe pola — możesz dodać kolejne ---- */
+    #nr_faktury { top: 4%; left: 32%; width: 22%; height: 3%; }
+    #miejscowosc { top: 4%; left: 73%; width: 23%; height: 3%; }
+    #data { top: 9%; left: 73%; width: 23%; height: 3%; }
 
-/* overlay that will contain absolute-positioned inputs scaled with the card */
-.overlay{position:absolute;inset:0}
+    #sprzedawca_nazwa { top: 16%; left: 4%; width: 40%; height: 3%; }
+    #sprzedawca_nip   { top: 20%; left: 4%; width: 40%; height: 3%; }
 
+    #nabywca_nazwa { top: 16%; left: 55%; width: 40%; height: 3%; }
+    #nabywca_nip   { top: 20%; left: 55%; width: 40%; height: 3%; }
 
-/* generic field styling */
-.field{position:absolute;font-size:0.9rem;border:1px solid rgba(0,0,0,0.18);background:rgba(255,255,255,0.9);padding:6px 8px;border-radius:4px;box-sizing:border-box}
-.field::placeholder{color:#666}
-input[type="text"], input[type="date"], input[type="number"], textarea{width:100%;height:100%;border:0;background:transparent;font:inherit;outline:none}
-textarea{resize:none}
+    /* Wiersz tabeli */
+    .item-nazwa { top: 34%; left: 5%; width: 38%; height: 3%; }
+    .item-ilosc { top: 34%; left: 45%; width: 5%;  height: 3%; }
+    .item-jm    { top: 34%; left: 51%; width: 5%; height: 3%; }
+    .item-cena  { top: 34%; left: 58%; width: 9%; height: 3%; }
+    .item-vat   { top: 34%; left: 72%; width: 4%; height: 3%; }
+    .item-netto { top: 34%; left: 77%; width: 9%; height: 3%; }
+    .item-brutto{ top: 34%; left: 88%; width: 9%; height: 3%; }
 
-
-/* small helper for invisible labels for accessibility */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-
-/* Example positions (percent values relative to container). Adjust as needed. */
-/* Top-left header fields */
-.f-invoice{left:58%;top:2%;width:28%;height:8%}
-.f-date{left:78%;top:14%;width:18%;height:6%}
-
-
-/* Recipient block */
-.f-recipient-name{left:6%;top:20%;width:55%;height:6%}
-.f-recipient-address{left:6%;top:27%;width:55%;height:8%}
-.f-recipient-nip{left:64%;top:27%;width:30%;height:6%}
-
-
-/* Table — we'll place several small inputs to match rows */
-.f-table-row{left:6%;width:60%;height:6%}
-.f-table-qty{left:68%;width:7%;height:6%}
-.f-table-unit{left:76%;width:9%;height:6%}
-.f-table-net{left:86%;width:8%;height:6%}
-
-
-/* Totals on right */
-.f-total-net{left:70%;top:66%;width:28%;height:6%}
-.f-total-vat{left:70%;top:73%;width:28%;height:6%}
-.f-total-gross{left:70%;top:80%;width:28%;height:6%}
-
-
-/* Payment method */
-.f-payment{left:6%;top:72%;width:60%;height:7%}
-
-
-/* make inputs look good on small screens */
-@media (max-width:520px){.field{font-size:0.8rem;padding:5px}}
+    #do_zaplaty { top: 63%; left: 22%; width: 33%; height: 4%; font-weight:bold; }
 </style>
 </head>
 <body>
-<!--
-Umieść plik 'fak.jpg' (załączone zdjęcie faktury) w tym samym folderze co ten plik HTML.
-Pola są absolutnie pozycjonowane procentowo, więc skalują się razem z obrazem.
-Dostosuj klasy i wartości left/top/width/height jeśli trzeba precyzyjnie wyrównać pola.
--->
 
+<div class="invoice">
 
-<div class="card" role="application" aria-label="Formularz faktury na tle obrazu">
-<div class="overlay">
+    <input id="nr_faktury" placeholder="Nr faktury">
+    <input id="miejscowosc" placeholder="Miejscowość">
+    <input id="data" placeholder="Data wystawienia">
 
+    <input id="sprzedawca_nazwa" placeholder="Sprzedawca – nazwa">
+    <input id="sprzedawca_nip" placeholder="Sprzedawca – NIP">
 
-<!-- Invoice header -->
-<div class="field f-invoice"><label class="sr-only" for="invoice">Numer faktury</label><input id="invoice" type="text" placeholder="Faktura Nr"></div>
-<div class="field f-date"><label class="sr-only" for="date">Data</label><input id="date" type="date"></div>
+    <input id="nabywca_nazwa" placeholder="Nabywca – nazwa">
+    <input id="nabywca_nip" placeholder="Nabywca – NIP">
 
+    <!-- Przykładowy pierwszy wiersz tabeli -->
+    <input class="item-nazwa" placeholder="Towar/usługa">
+    <input class="item-ilosc" placeholder="Ilość">
+    <input class="item-jm" placeholder="J.m.">
+    <input class="item-cena" placeholder="Cena netto">
+    <input class="item-vat" placeholder="VAT %">
+    <input class="item-netto" placeholder="Netto">
+    <input class="item-brutto" placeholder="Brutto">
 
-<!-- Recipient -->
-<div class="field f-recipient-name"><label class="sr-only" for="rcpt-name">Nabywca - nazwa</label><input id="rcpt-name" type="text" placeholder="Nabywca / Firma"></div>
-<div class="field f-recipient-address"><label class="sr-only" for="rcpt-addr">Adres</label><input id="rcpt-addr" type="text" placeholder="Adres"></div>
-<div class="field f-recipient-nip"><label class="sr-only" for="rcpt-nip">NIP</label><input id="rcpt-nip" type="text" placeholder="NIP"></div>
+    <input id="do_zaplaty" placeholder="Do zapłaty">
+</div>
 
-
-<!-- Table rows (example 3 rows). Adjust 'top' positions below to stack rows. -->
-<div class="field f-table-row" style="top:40%"><label class="sr-only">Opis 1</label><input type="text" placeholder="Nazwa towaru/usługi"></div>
-<div class="field f-table-qty" style="top:40%"><label class="sr-only">Ilość 1</label><input type="number" placeholder="Ilość"></div>
-<div class="field f-table-unit" style="top:40%"><label class="sr-only">Jm 1</label><input type="text" placeholder="Jm"></div>
-<div class="field f-table-net" style="top:40%"><label class="sr-only">Kwota netto 1</label><input type="text" placeholder="Kwota netto"></div>
-
-
+</body>
 </html>
