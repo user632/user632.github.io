@@ -25,14 +25,14 @@ body{justify-content: center;
 <div class="dane">nazwisko: <?php echo htmlspecialchars($_POST['nazw']); ?></div>
 <div class="dane">rok urodzenia: <?php echo htmlspecialchars($_POST['ur']); ?></div>
 <div class="dane"> hasło hihi: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> adres:  <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> miasto: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> podany email: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> dokument prawa jazdy: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> płec: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> uwagi: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> numer telefonu: <?php echo htmlspecialchars($_POST['pass']); ?></div>
-<div class="dane"> wojewodztwo: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> adres:  <?php echo htmlspecialchars($_POST['ul']); ?></div>
+<div class="dane"> miasto: <?php echo htmlspecialchars($_POST['M']); ?></div>
+<div class="dane"> podany email: <?php echo htmlspecialchars($_POST['mail']); ?></div>
+<div class="dane"> dokument prawa jazdy: <?php echo htmlspecialchars($_POST['dokument']); ?></div>
+<div class="dane"> płec: <?php echo htmlspecialchars($_POST['sex']); ?></div>
+<div class="dane"> uwagi: <?php echo htmlspecialchars($_POST['uwagi']); ?></div>
+<div class="dane"> numer telefonu: <?php echo htmlspecialchars($_POST['nrtel']); ?></div>
+<div class="dane"> wojewodztwo: <?php echo htmlspecialchars($_POST['wojewodztwo']); ?></div>
 
 
 </body>
