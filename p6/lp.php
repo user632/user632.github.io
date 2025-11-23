@@ -15,17 +15,25 @@ body{justify-content: center;
     width: 60%;
     height: 50px;
     justify-content: center;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 </style>
 </head>
 <body>  
-<div class="dane">imie podane w formularzu:<?php echo htmlspecialchars($_POST['imie']); ?></div>
-<div class="dane"><?php echo htmlspecialchars($_POST['nazw']); ?></div>
-<div class="dane"><?php echo htmlspecialchars($_POST['ur']); ?></div>
-<div class="dane"><?php echo htmlspecialchars($_POST['pass']); ?></div>
-Hi <?php echo htmlspecialchars($_POST['imie']); ?>.
+<div class="dane">imie podane w formularzu: <?php echo htmlspecialchars($_POST['imie']); ?></div>
+<div class="dane">nazwisko: <?php echo htmlspecialchars($_POST['nazw']); ?></div>
+<div class="dane">rok urodzenia: <?php echo htmlspecialchars($_POST['ur']); ?></div>
+<div class="dane"> hasło hihi: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> adres:  <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> miasto: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> podany email: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> dokument prawa jazdy: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> płec: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> uwagi: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> numer telefonu: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"> wojewodztwo: <?php echo htmlspecialchars($_POST['pass']); ?></div>
+
 
 </body>
 </html>
