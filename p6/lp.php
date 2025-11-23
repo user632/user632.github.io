@@ -7,8 +7,14 @@ body{justify-content: center;}
 .dane{
           display: flex;
       gap: 20px;
-      margin-top: 5px;
+      margin: 10px;
+      
       background-color: #30c902;
+          border-radius: 10px;
+    width: 80px;
+    height: 50px;
+    justify-content: center;
+    font-size: 40px;
 }
 
 </style>
