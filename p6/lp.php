@@ -11,10 +11,10 @@ body{justify-content: center;}
       
       background-color: #30c902;
           border-radius: 10px;
-    width: 80px;
+    width: 60%;
     height: 50px;
     justify-content: center;
-    font-size: 40px;
+    font-size: 16px;
 }
 
 </style>
