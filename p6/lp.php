@@ -20,7 +20,7 @@ body{justify-content: center;}
 </style>
 </head>
 <body>  
-<div class="dane"><?php echo htmlspecialchars($_POST['imie']); ?></div>
+<div class="dane">imie podane w formularzu:<?php echo htmlspecialchars($_POST['imie']); ?></div>
 <div><?php echo htmlspecialchars($_POST['nazw']); ?></div>
 <div><?php echo htmlspecialchars($_POST['ur']); ?></div>
 <div><?php echo htmlspecialchars($_POST['pass']); ?></div>
