@@ -3,13 +3,14 @@
 <head>
 <style>
 .error {color: #FF0000;}
-body{justify-content: center;}
+body{justify-content: center;
+ background-color: #4263bfff;}
 .dane{
           display: flex;
       gap: 20px;
       margin: 10px;
       
-      background-color: #30c902;
+      background-color: #c6e3bdff;
           border-radius: 10px;
     width: 60%;
     height: 50px;
@@ -21,9 +22,9 @@ body{justify-content: center;}
 </head>
 <body>  
 <div class="dane">imie podane w formularzu:<?php echo htmlspecialchars($_POST['imie']); ?></div>
-<div><?php echo htmlspecialchars($_POST['nazw']); ?></div>
-<div><?php echo htmlspecialchars($_POST['ur']); ?></div>
-<div><?php echo htmlspecialchars($_POST['pass']); ?></div>
+<div class="dane"><?php echo htmlspecialchars($_POST['nazw']); ?></div>
+<div class="dane"><?php echo htmlspecialchars($_POST['ur']); ?></div>
+<div class="dane"><?php echo htmlspecialchars($_POST['pass']); ?></div>
 Hi <?php echo htmlspecialchars($_POST['imie']); ?>.
 
 </body>
