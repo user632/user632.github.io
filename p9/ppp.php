@@ -43,5 +43,5 @@ crawl($href, $depth + 1, $maxDepth, $visited);
 }
 
 
-
+aaa("https://www.sejm-wielki.pl/s/i.php?qt=Szembek&rozwin=1");
 ?>
