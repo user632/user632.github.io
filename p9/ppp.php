@@ -1,15 +1,31 @@
 <?php
+$url= 'http://www.sejm-wielki.pl/s/i.php?qt=Szembek&rozwin=1&ad_closed=true';
+
+$arrContextOptions=array(
+      "ssl"=>array(
+            "verify_peer"=>false,
+            "verify_peer_name"=>false,
+        ),
+    );  
+
+$response = file_get_contents($url, false, stream_context_create($arrContextOptions));
+echo $response;
+?><?php
 
 function aaa($url){
-$html = @file_get_contents($url);
+echo "1";
+$html = file_get_contents($url);
+echo "1";
 if ($html === false) return;
 
 
 $dom = new DOMDocument();
+echo "1";
 @$dom->loadHTML($html);
 
 
 foreach ($dom->getElementsByClassName('sw1') as $link) {
+echo "1";
 $href = $link->getAttribute('href');
 echo $href;
 //f2($href);
@@ -54,5 +70,5 @@ crawl($href, $depth + 1, $maxDepth, $visited);
 }
 
 
-aaa("https://www.sejm-wielki.pl/s/i.php?qt=Szembek&rozwin=1");
+aaa("http://www.sejm-wielki.pl/s/i.php?qt=Szembek");
 ?>
