@@ -12,7 +12,18 @@ $dom = new DOMDocument();
 foreach ($dom->getElementsByClassName('sw1') as $link) {
 $href = $link->getAttribute('href');
 echo $href;
+//f2($href);
+}}
+function f2($url){
+$html = @file_get_contents($url);
+if ($html === false) return;
+
+
+$dom = new DOMDocument();
+@$dom->loadHTML($html);
+
 }
+
 function crawl($url, $depth = 1, $maxDepth = 2, &$visited = []) {
 if ($depth > $maxDepth || in_array($url, $visited)) {
 return;
