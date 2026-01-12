@@ -9,7 +9,28 @@ $arrContextOptions=array(
     );  
 
 $response = file_get_contents($url, false, stream_context_create($arrContextOptions));
-echo $response;
+$dom = new DOMDocument();
+$dom->loadHTML($response);
+
+ $collection = $dom->getElementsByTagName('li');
+
+echo "lista osób z mojej rodziny dostepna na psw bez zalogowania<br>";
+foreach ($collection as $ll) {
+try{
+$elo = $ll->firstChild;
+$lb=$elo->getAttribute('href');
+$dd=$elo->nodeValue;
+$cc=trim($lb);
+if($cc[1]=="b"){
+$eee=strpos($dd,"h. ");
+$df=substr($dd,0,$eee);
+echo  "<a href='http://www.sejm-wielki.pl".$cc."'>".$df."</a><br>";
+}
+
+}catch(Exception $e){}
+
+}
+
 ?><?php
 
 function aaa($url){
@@ -30,15 +51,7 @@ $href = $link->getAttribute('href');
 echo $href;
 //f2($href);
 }}
-function f2($url){
-$html = @file_get_contents($url);
-if ($html === false) return;
 
-
-$dom = new DOMDocument();
-@$dom->loadHTML($html);
-
-}
 
 function crawl($url, $depth = 1, $maxDepth = 2, &$visited = []) {
 if ($depth > $maxDepth || in_array($url, $visited)) {
@@ -70,5 +83,5 @@ crawl($href, $depth + 1, $maxDepth, $visited);
 }
 
 
-aaa("http://www.sejm-wielki.pl/s/i.php?qt=Szembek");
+//aaa("http://www.sejm-wielki.pl/s/i.php?qt=Szembek");
 ?>
