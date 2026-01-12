@@ -1,4 +1,10 @@
 <?php
+
+function aaa($url){
+document=
+const collection = document.getElementsByClassName("example");
+
+}
 function crawl($url, $depth = 1, $maxDepth = 2, &$visited = []) {
 if ($depth > $maxDepth || in_array($url, $visited)) {
 return;
